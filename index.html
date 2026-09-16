@@ -366,19 +366,25 @@
   }
 
   @media (max-width: 720px){
+    .nav-inner{ position:relative; }
+    .burger{ display:none; }
+    .nav-inner > .btn-sm{ order:2; margin-left:auto; }
+    .burger-icon{ order:3; margin-left:12px; }
     .nav-links{
-      position:fixed; inset:66px 0 0 0; height:0; overflow:hidden;
+      order:4;
+      position:fixed; inset:77px 0 0 0; height:0; overflow:hidden;
       flex-direction:column; align-items:flex-start; gap:0;
       background:var(--white); padding:0 24px;
       transition:height .25s ease;
     }
-    .burger:checked ~ .nav-links{ height:calc(100vh - 66px); padding-top:10px; }
+    .burger:checked ~ .nav-links{ height:calc(100vh - 77px); padding-top:10px; }
     .nav-links a{ width:100%; padding:16px 0; border-bottom:1px solid var(--line); }
     .burger-icon{
       display:flex; flex-direction:column; gap:5px; cursor:pointer;
       width:26px;
     }
     .burger-icon span{ height:2px; background:var(--navy); border-radius:2px; }
+    section{ scroll-margin-top:77px; }
     .section-pad{ padding:60px 0; }
     .service-grid{ grid-template-columns:1fr; }
     .strength-list{ grid-template-columns:1fr; }
@@ -668,6 +674,15 @@
   <a href="https://lin.ee/WwIOjFU" class="btn btn-line">LINEで相談</a>
   <a href="#contact" class="btn btn-outline">フォームで相談</a>
 </div>
+
+<script>
+  const navToggle = document.querySelector('#nav-toggle');
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navToggle.checked = false;
+    });
+  });
+</script>
 
 </body>
 </html>
