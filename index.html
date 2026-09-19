@@ -399,6 +399,112 @@
     font-size:0.9rem; color:var(--text-soft); font-style:normal;
   }
 
+  .case-page-header{
+    max-width:980px;
+    margin:0 auto 40px;
+    text-align:center;
+  }
+  .case-page-header h2{
+    font-size:clamp(2rem, 3vw, 3rem);
+    font-weight:700;
+    line-height:1.45;
+    letter-spacing:-0.03em;
+    margin-bottom:10px;
+    color:var(--navy);
+  }
+  .case-page-header p{
+    font-size:1.02rem;
+    color:var(--text-soft);
+    line-height:1.8;
+  }
+
+  .case-card{
+    display:grid;
+    grid-template-columns:1.02fr 0.98fr;
+    gap:0;
+    border:1px solid rgba(11,87,208,0.08);
+    border-radius:20px;
+    overflow:hidden;
+    background:rgba(239,245,251,0.7);
+    box-shadow:0 8px 22px rgba(16,35,63,0.04);
+  }
+  .case-visual{
+    background:rgba(190,220,247,0.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:365px;
+    padding:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .case-visual::before{
+    content:"リサイクルショップ夢工房 外観";
+    position:absolute;
+    top:18px;
+    left:22px;
+    z-index:2;
+    display:inline-block;
+    font-family:"Zen Maru Gothic", sans-serif;
+    font-size:1rem;
+    font-weight:700;
+    color:rgba(16,35,63,0.9);
+    letter-spacing:0.02em;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(16,35,63,0.08);
+    border-radius:999px;
+    padding:6px 14px;
+  }
+  .case-photo{
+    width:100%;
+    height:100%;
+    min-height:365px;
+    object-fit:cover;
+    display:block;
+    filter:saturate(0.95) contrast(1.02);
+  }
+  .case-body{
+    padding:48px 44px 32px 44px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:rgba(255,255,255,0.42);
+  }
+  .case-card .case-tag{
+    display:inline-flex;
+    width:fit-content;
+    font-size:0.82rem;
+    font-weight:700;
+    color:var(--blue);
+    background:rgba(11,87,208,0.08);
+    border:1px solid rgba(11,87,208,0.12);
+    padding:8px 16px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .case-body h3{
+    font-size:clamp(1.7rem, 2.3vw, 2.5rem);
+    line-height:1.38;
+    font-weight:700;
+    margin-bottom:18px;
+    letter-spacing:-0.02em;
+  }
+  .case-body p{
+    color:var(--text-soft);
+    font-size:1rem;
+    line-height:1.8;
+    max-width:48ch;
+  }
+  .case-flow{ display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+  .case-flow span{
+    font-size:0.82rem;
+    color:#2f4969;
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(16,35,63,0.08);
+    border-radius:999px;
+    padding:8px 16px;
+  }
+
   /* ---------- Profile ---------- */
   .profile-wrap{
     display:grid; grid-template-columns:0.8fr 1.2fr;
@@ -694,19 +800,18 @@
   <!-- ---------- Case study ---------- -->
   <section id="case" class="section-pad">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">制作事例</span>
+      <div class="case-page-header">
         <h2>対面での伴走から生まれた、事例のご紹介。</h2>
-        <p>実際にお会いしてお話を伺いながら進めた制作事例です。順次、掲載を増やしてまいります。</p>
+        <p>実際にお会いしてお話を伺いながら、順次、掲載を増やしてまいります。</p>
       </div>
 
       <div class="case-card">
         <div class="case-visual">
-          <img class="case-photo" src="yumekoubou_phot.jpg" alt="リサイクルショップ夢工房 外観写真" style="width:100%; height:100%; min-height:260px; object-fit:cover; display:block;">
+          <img class="case-photo" src="yumekoubou_phot.jpg" alt="リサイクルショップ夢工房 外観写真">
         </div>
         <div class="case-body">
-          <span class="case-tag">リサイクルショップ夢工房様（北海道小樽市）</span>
-          <h3>家族経営の店舗様へ、対面ヒアリングからサイト制作を伴走。</h3>
+          <span class="case-tag">リサイクルショップ夢工房（北海道小樽市）</span>
+          <h3>家具経営の店舗様へ、対面ヒアリングからサイト制作を伴走。</h3>
           <p>実際にお店へお伺いして雰囲気を拝見しながら、取り扱い品目やサービス内容を一緒に整理し、オリジナルデザインで一つずつ形にしました。</p>
           <div class="case-flow">
             <span>対面ヒアリング</span>
